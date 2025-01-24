@@ -101,7 +101,8 @@ h3 {
 
 #meta {
   color: hsl(0, 0%, 100%);
-  margin-bottom: 1px;
+  margin-bottom: 0px;
+  margin-top: 5px;
 }
 /* Make meta under the last h3 and same color as buttons*/
 .book-container > h3:last-of-type {
