@@ -1,0 +1,147 @@
+@font-face {
+  font-family: sf;
+  src: url(IRANSansXRegular.ttf);
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+button {
+  margin: 5px;
+  font-family: sf;
+  padding: 10px;
+  background-color: #2261b8;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 250ms;
+}
+
+button:hover {
+  background-color: #1b4b8e;
+  transform: translateY(3px);
+}
+
+body {
+  direction: rtl;
+  font-family: sf;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-image: url(/math-background.jpg);
+  margin: 0;
+}
+
+.book-title {
+  margin: 20px 0;
+  text-align: center;
+  color: hsl(0, 0%, 90%);
+}
+
+.book-container {
+  overflow: hidden;
+  top: 0;
+  max-width: 1000px;
+  background-color: hsla(0, 0%, 0%, 0.088);
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 90vh;
+  overflow-y: auto;
+  border-radius: 2%;
+  position: relative;
+  z-index: 1;
+}
+
+.book-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(40, 40, 40, 0.5);
+  backdrop-filter: blur(5px);
+  z-index: -1;
+}
+
+.book-page {
+  margin-bottom: 20px;
+  width: 100%;
+  padding: 20px;
+  background-color: #f9f9f900;
+  overflow: auto;
+  max-height: 70vh;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  margin: 5px;
+  font-family: sf;
+  padding: 10px;
+  background-color: #5680bb;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  transition: 250ms;
+}
+
+/* Additional for better reading */
+h1,
+h2,
+h3 {
+  color: hsl(0, 0%, 900%);
+  margin-bottom: 15px;
+}
+
+#meta {
+  color: hsl(0, 0%, 100%);
+  margin-bottom: 1px;
+}
+/* Make meta under the last h3 and same color as buttons*/
+.book-container > h3:last-of-type {
+    margin-top: 20px;
+    color: #2261b8;
+  }
+
+p,
+li {
+  color: hsl(0, 0%, 85%);
+  font-size: 1.1em;
+  margin-bottom: 10px;
+}
+
+a {
+  color: #66a2f5;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+.book-container > div {
+  margin-top: 20px; /* Push the button container down */
+}
+
+.progress-bar {
+    width: 100%;
+    height: 5px;
+    background-color: #f0f0f0;
+  position: relative;
+    margin-bottom: 10px;
+}
+
+.progress-bar-inner {
+  height: 5px;
+  background: #007bff;
+  width: 0%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: width 0.2s ease-in-out;
+}
