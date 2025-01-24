@@ -31,7 +31,7 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background-image: url(/image/math.jpg);
+  background-image: url("image/math.jpg");
   margin: 0;
 }
 
